@@ -1,3 +1,5 @@
+# [NOTE] CODE not working still trying to figure out what I'm missing.
+
 import socket
 import threading
 
