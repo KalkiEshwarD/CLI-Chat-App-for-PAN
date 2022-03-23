@@ -1,7 +1,7 @@
 import threading
 import socket
 
-HOST = '192.168.0.163'
+HOST = '**********'    # Add the ip address of the server you would like to connect to.
 PORT = 55555
 FORMAT = 'utf-8'
 USERNAME = input("Enter your user name: ")
