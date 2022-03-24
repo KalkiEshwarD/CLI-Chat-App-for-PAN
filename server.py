@@ -53,26 +53,3 @@ def on_boarding():
 
 
 on_boarding()
-
-                break
-
-
-def broadcast(message, username):
-    for client in CLIENTS:
-        client.send(f'{username}: {message}'.encode(FORMAT))
-
-
-def on_boarding():
-    while True:
-        connection, address = server_socket.accept()
-        CLIENTS.append(connection)
-        connection.send('[SERVER]: Connected to server.\n'.encode(FORMAT))
-        user_name = connection.recv(1024).decode()
-        print(f'{user_name} with address {address} has connected to the server.')
-        USER_NAMES.append(user_name)
-        broadcast(f'{user_name} has joined the server.', '[SERVER]')
-        receive_msg_thread = threading.Thread(target=receive_msg, args=(connection, user_name,))
-        receive_msg_thread.start()
-
-
-on_boarding()
