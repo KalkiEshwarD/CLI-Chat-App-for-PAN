@@ -1,2 +1,2 @@
-# CLI-Chat-App-for-LAN
+# CLI-Chat-App-for-PAN
 A primitive messaging system for PAN-connected devices
